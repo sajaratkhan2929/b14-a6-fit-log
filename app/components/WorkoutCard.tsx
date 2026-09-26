@@ -5,7 +5,7 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
   return (
     <Link
       href={`/workouts/${workout.id}`}
-      className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-[#ccff00] transition block"
+      className="bg-neutral-900 border border-gray-800 rounded-xl overflow-hidden hover:border-[#ccff00] transition block"
     >
       <img
         src={workout.image}
@@ -17,15 +17,15 @@ export default function WorkoutCard({ workout }: { workout: Workout }) {
           {workout.muscleGroups.map((tag) => (
             <span
               key={tag}
-              className="badge badge-sm bg-[#ccff00] text-black border-none font-medium uppercase"
+              className="badge badge-sm bg-[#ccff00] text-black border-none font-bold uppercase"
             >
               {tag}
             </span>
           ))}
         </div>
-        <h3 className="font-bold uppercase tracking-wide">{workout.name}</h3>
+        <h3 className="font-bold uppercase tracking-wide text-lg">{workout.name}</h3>
         <p className="text-gray-400 text-sm">{workout.equipment}</p>
-        <div className="flex items-center gap-4 text-sm text-gray-300 pt-1">
+        <div className="flex items-center gap-4 text-sm text-gray-400 pt-3 mt-1 border-t border-gray-800">
           <span>⏱ {workout.duration} min</span>
           <span>🔥 {workout.caloriesBurned} kcal</span>
           <span>⭐ {workout.rating}</span>

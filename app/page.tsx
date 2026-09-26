@@ -7,12 +7,12 @@ export default async function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-8 max-w-6xl mx-auto">
+      <section className="mx-6 md:mx-auto max-w-6xl mt-8 mb-12 bg-[#141415] rounded-2xl px-8 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="flex-1">
           <p className="text-[#ccff00] font-semibold tracking-widest text-sm mb-3">
             WORKOUT LIBRARY
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold uppercase leading-tight mb-4">
+          <h1 className="text-4xl md:text-4xl font-bold uppercase leading-tight mb-4">
             Train with intent. Log every set.
           </h1>
           <p className="text-gray-400 mb-6 max-w-md">
@@ -23,7 +23,7 @@ export default async function Home() {
             href="#library"
             className="inline-block bg-[#ccff00] text-black font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#b3e600] transition-colors"
           >
-            Explore the Library
+            BROWSE WORKOUTS
           </a>
         </div>
         <div className="flex-1 flex justify-center">
