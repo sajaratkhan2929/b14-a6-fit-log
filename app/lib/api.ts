@@ -1,7 +1,6 @@
 import { Workout } from "@/app/types/workout";
 
-const BASE_URL = "https://api.api-store.workers.dev/api/fitlog";
-
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://api.api-store.workers.dev/api/fitlog";
 export async function getAllWorkouts(): Promise<Workout[]> {
   try {
     const res = await fetch(BASE_URL, { cache: "no-store" });
