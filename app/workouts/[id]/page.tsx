@@ -1,5 +1,6 @@
 import { getWorkoutById } from "@/app/lib/api";
 import { notFound } from "next/navigation";
+import ActionButtons from "./ActionButtons";
 
 export default async function WorkoutDetail({
   params,
@@ -67,14 +68,7 @@ export default async function WorkoutDetail({
         </ol>
 
         {/* Buttons */}
-        <div className="flex gap-3">
-          <button className="btn bg-[#ccff00] text-black border-none font-semibold">
-            Add to today&apos;s plan
-          </button>
-          <button className="btn btn-outline border-gray-600 text-white">
-            Save for later
-          </button>
-        </div>
+        <ActionButtons workout={workout} />
       </div>
     </div>
   );
