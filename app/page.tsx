@@ -1,5 +1,5 @@
 import { getAllWorkouts } from "@/app/lib/api";
-import WorkoutCard from "@/app/components/WorkoutCard";
+import WorkoutGrid from "@/app/components/WorkoutGrid";
 
 export default async function Home() {
   const workouts = await getAllWorkouts();
@@ -41,11 +41,7 @@ export default async function Home() {
         <p className="text-gray-400 mb-8">
           Twelve lifts covering every major muscle group.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {workouts.map((workout) => (
-            <WorkoutCard key={workout.id} workout={workout} />
-          ))}
-        </div>
+        <WorkoutGrid workouts={workouts} />
       </section>
     </div>
   );

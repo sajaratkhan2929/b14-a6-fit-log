@@ -2,6 +2,7 @@ import { getWorkoutById } from "@/app/lib/api";
 import { notFound } from "next/navigation";
 import ActionButtons from "./ActionButtons";
 
+
 export default async function WorkoutDetail({
   params,
 }: {
