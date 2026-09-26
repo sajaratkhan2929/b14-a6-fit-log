@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="bg-black border-b border-gray-800 px-6 py-4 flex items-center justify-between">
       <Link href="/" className="flex items-center gap-2 font-bold text-lg tracking-wide">
-        <span className="text-[#ccff00]">⚡</span>
+        <img src="/logo.png" alt="FitLog logo" className="w-6 h-6" />
         FITLOG
       </Link>
 
